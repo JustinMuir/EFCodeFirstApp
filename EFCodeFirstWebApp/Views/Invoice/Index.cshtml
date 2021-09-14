@@ -1,0 +1,30 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "Invoice";
+}
+
+
+<div class="container">
+   
+   @foreach (var item in Model) { 
+       
+       @Html.Raw(item);
+       
+   }
+
+<div id="footer">
+    <ul class="nav nav-pills">
+
+        <li>
+            @Html.ActionLink("Back To Orders", "BackToOrder", new { id = ViewBag.CustomerID, page = 1 })
+        </li>
+       
+    </ul>
+</div>
+
+
+
+
+</div>
+
+
